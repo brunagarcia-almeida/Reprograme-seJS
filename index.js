@@ -68,6 +68,12 @@ for (var i = 1; i <= 5; i++) {
   var nome = prompt("Digite seu nome: ");
   var salario_bruto = parseFloat(prompt("Digite seu salário bruto: "));
   var dependentes = parseInt(prompt("Digite a quantidade de dependentes que você possui: "));
+
+  for (var j = 1; j <= dependentes; j++) {
+    var ganho = parseFloat(prompt("Digite o ganho mensal do dependente: "));
+    salario_bruto = salario_bruto + ganho;
+  }
+
   var renda_PerCapita = salario_bruto / (dependentes + 1);
   var ir = null;
   var salario_liquido = null;
